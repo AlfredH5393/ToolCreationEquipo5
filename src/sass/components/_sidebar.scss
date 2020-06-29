@@ -1,0 +1,43 @@
+/*//////////////////////////////////////////////////////////////////
+[ Sidebar ]*/
+.side-bar {
+    grid-area: menu;
+    background: #fff;
+    overflow: hidden;
+    
+  }
+  
+  .side-bar a{
+      display: block;
+      padding: 15px 35px;
+      color: #000;
+      min-width: 800px;
+  }
+  
+  .side-bar a:hover{
+      background: #e5e5e5;
+      text-decoration: none;
+      color: #FF5A00;
+  }
+  
+  .side-bar a.active {
+  
+    border-left: 5px solid #FF7D36;
+      font-weight: bold;
+  }
+  
+  .side-bar .fas{
+      color: #606060;
+      margin-right: 32px;
+      width: 20px;
+      text-align: center;
+  }
+  
+  .side-bar a.active .fas{
+      color:#EE7444
+  }
+  
+  .side-bar hr{
+      margin: 20px 0;
+      border: 1px solid #FF7D36;
+  }

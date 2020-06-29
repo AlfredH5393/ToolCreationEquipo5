@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrate | ToolCreation</title>
+     <!--=========================================  Links CSS ======================================================-->
+    
+     <link rel="stylesheet" href="../src/css/normalize.css">
+     <link rel="stylesheet" href="../src/css/style.css">
+     <link rel="stylesheet" href="../src/icons/all.css">
+</head>
+<body class="bg-svg-register">
+    <div class="content-login">
+        <div class=" content-form-login">
+           <h1>Regístrate</h1> 
+            <ul class="progress-bar">
+                
+                <li class="active">Datos personales</li>
+                <li>Datos de plataforma</li>
+
+            </ul>
+            
+            <form action="" id="msform">
+                <!-- <h4>Informacion personal</h4> -->
+              <fieldset class="page1">
+                    <div class="my-form-row">
+                            <input type="text" placeholder="Nombre" class="input-70" id="nombre">
+                    </div>
+                    <div class="my-form-row">
+                                <input type="text" class="input-33" placeholder="Apellido paterno" id="AP">
+                            
+                                <input type="text" class="input-33" placeholder="Apellido materno" id="AM">
+                        
+                    </div>
+
+                    <div class="my-form-row">
+                        
+                                <input type="text" placeholder="Año"  class="input-15" id="year">
+                        
+                                <input type="text" placeholder="Mes"  class="input-15"id="month">
+                        
+                                <input type="text" placeholder="Dia"  class="input-15" id="day">
+                            
+                                <input type="text" placeholder="Edad" class="input-15" id="age">
+                        
+                    </div>
+
+                    <div class="my-form-row">
+                            <select name="" id="" class="input-70">
+                                <option value="0">Selecciona tu Sexo</option>
+                                <option value="1">Masculino</option>
+                                <option value="2">Femenino</option>
+                                <option value="3">Prefieron no decirlo</option>
+                            </select>
+                        
+                    </div>
+                    <div class=" my-form-row">
+                        <button  type ="button" class="next-1 btn-next"> Siguiente</button>
+                    </div>
+                </fieldset> 
+            
+              
+                <fieldset class="page2">
+                    <!-- <h4>Identificaion dentro de la plataforma</h4> -->
+                    <div class="my-form-row-2">
+                        <input type="email" name="" class="input-70" placeholder="Email" id="email">
+                    </div>
+
+                    <div class="my-form-row-2">
+                            <input type="text" name=""  class="input-70" placeholder="Usuario" id="usuario">               
+                    </div>
+
+                    <div class="my-form-row-2">
+                            <input type="password" name="" class="input-70" placeholder="Contraseña" id="password">
+                    </div>
+            
+                    <div class="my-form-row-2">
+                            <input type="password" name="" placeholder="repetir contraseña" class="input-70" id="password2">
+                           
+                    </div>   
+                    <div class="my-form-row-2 ">
+                        <button type="button" class="input-33 prev-1 btn-prev">Anterior</button>
+                        <button type="button" class="input-33 btn-rgister"> Registrarme</button>
+                    </div>
+                </fieldset>
+               
+
+            </form>
+        </div>
+
+        <div class="content-info">
+             <img src="./src//img/Logo-ToolCreatiion.png"  alt="">
+
+             <div class="info-question">
+                 <h2> ¿Eres nuev@ por aquí?</h2>  
+                 <p>Regístrate y empieza a aprender con nosotros, certifacate y retate a ti mismo</p> 
+             </div>
+
+             <div class="info-access">
+                 <p>¿Ya tiene cuenta?</p>
+                 <a href="login.html" class="btn-page-login"> Acceder <i class="fas fa-sign-out-alt"></i></a>
+             </div>
+        </div>
+    </div>
+
+    <a href="login.html" class="btn-back"><i class="fas fa-arrow-left"></i></a>
+    <script src="../src/js/jquery-3.5.1.min.js"></script>
+    <script src="../src/js/step.js"></script>
+</body>
+</html>

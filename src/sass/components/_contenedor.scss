@@ -1,0 +1,16 @@
+.contenedor {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(90px, 90px) auto;
+    grid-template-rows: 60px auto;
+    grid-template-areas:
+      "header header"
+      "menu contenido";
+    transition: all 0.3s ease;
+  }
+  .contenedor.active {
+    grid-template-columns:  minmax(300px, 18%) auto;
+  }
+  
