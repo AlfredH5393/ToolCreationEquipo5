@@ -1,3 +1,7 @@
+<?php
+session_start();
+  if (isset($_SESSION['ingreso']) && $_SESSION['ingreso']=='YES' &&  $_SESSION['idRol'] == "1") 
+{?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,20 +24,14 @@
         <!-- Los archivos php de header y sidebar -->
         <?php require './includes/header.php'?>
 
-         <?php require './includes/sidebar.php'?>
+         <?php  $page = 'moneda'; require './includes/sidebar.php'?>
 
         <!-- cONTENEDOR DE LOS ELEMENTOS QUE INTERCATUAN CON LA TABLA O EL CRUD -->
         <main class="main">
             <h2 class="title">Modulo de {{titleModule}}</h2>
 
             <!-- Contenedor de las alertas -->
-            <div class="container-alert">
-                  <div v-bind:class="alertgeneral" role="alert">
-                          <p>{{messagealert}}</p>
-                          <i v-bind:class="alerticon"></i>
-                  </div>
-
-            </div>
+          
 
             <!-- Contenedor general de la tabla y los botones y la paginacion -->
             <div class="wrap-table100" id="wrap-table">
@@ -236,3 +234,10 @@
  
 </body>
 </html>
+<?php
+  }
+  else
+  {
+    header("location: ../public/login.html");
+  }
+ ?>

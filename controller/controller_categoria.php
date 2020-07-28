@@ -1,10 +1,11 @@
-<?php
+<?php 
 $operacion = $_POST['option'];
 //------------------[llamado a los archivos]------------------------
 //SINGLETON
 // require('../model/singleton/model_categoria_curso.php');
 
 //MVC 
+// require('../model/mvc/conexion.php');
 // require('../model/mvc/model_mvc_categoria_inst.php');
 
 //DAO
@@ -15,12 +16,12 @@ require('../model/DAO/DAO_categoria.php');
 //instancia de [singleton]
 // $objCategoria = new SINGLETONCategoria();
 
-//intancia generaL para patron PATRON [mvv]
+//intancia generaL para patron PATRON [mvc]
 // $objCategoria = new MVCCategoriaInstructor();
 
 //instancia para DAO Y VO
 $dao = new DAOCategoria();
-$objCategoria = new VOCategoriaInst();
+$VOCategoria = new VOCategoriaInst();
 
 
 switch($operacion)
@@ -30,21 +31,21 @@ switch($operacion)
             // $objCategoria->setNombreCategoria($_POST['nombreCategoria']);
             // echo $objCategoria->insertData();
 
-            //implementar DAO Y VO
-            $objCategoria->setNombreCategoria($_POST['nombreCategoria']);
-            echo $dao->insertData($objCategoria);
+            // implementar DAO Y VO
+            $VOCategoria->setNombreCategoria($_POST['nombreCategoria']);
+            echo $dao->insertData($VOCategoria);
         break;
 
         case 'update':
             //llamada a SINGLETON O MVC
             //   $objCategoria->setId($_POST['id']);
             //   $objCategoria->setNombreCategoria($_POST['nombreCategoria']);
-            //   echo $objCategoria->updatetData();
+            //   echo $objCategoria->updatetData(); 
 
              //implementar DAO Y VO
-             $objCategoria->setId($_POST['id']);
-             $objCategoria->setNombreCategoria($_POST['nombreCategoria']);
-             echo $dao->updatetData($objCategoria);
+             $VOCategoria->setId($_POST['id']);
+             $VOCategoria->setNombreCategoria($_POST['nombreCategoria']);
+             echo $dao->updatetData($VOCategoria);
         break;
 
         case 'delete':
@@ -53,8 +54,8 @@ switch($operacion)
             // echo $objCategoria->deleteData();
 
              //implementar DAO Y VO
-             $objCategoria->setId($_POST['id']);
-             echo $dao->deleteData($objCategoria);
+             $VOCategoria->setId($_POST['id']);
+             echo $dao->deleteData($VOCategoria);
         break;
 
         case 'showdata':
@@ -63,13 +64,13 @@ switch($operacion)
             // echo $objCategoria->getData();
 
             //implementando DAO
-            echo $dao->getData();
+            echo $dao->getData(); 
         break;
         case 'count':
             //implmentacio de singleton y MVC
             // echo $objCategoria->countRegister();
             
             //  implementando DAO
-            echo $dao->countRegister();
+            echo $dao->countRegister(); 
         break;
 }

@@ -154,7 +154,7 @@ const PLATAFORMA = new Vue({
             }
         },
         validarCajasVacias: function(caja){
-            if( caja.nombre == 0 || caja.descripcion == 0, caja.metas == 0, caja.objetivos == 0, caja.mision == 0, caja.vision == 0){
+            if( caja.nombre == 0 || caja.descripcion == 0 || caja.metas == 0  || caja.objetivos == 0  || caja.mision == 0  || caja.vision == 0){
                 return true;
             }
             return false
@@ -229,7 +229,21 @@ const PLATAFORMA = new Vue({
         next: function(){
             this.paginaActual = this.paginaActual + 1;
             this.paginar(this.paginaActual);
-        }
+        },
+        closeSesion: () =>{
+            let formdata = new FormData();
+            formdata.append('option','destroySesion');
+            axios.post("../controller/controller_login.php", formdata)
+                    .then(function (response) {
+                        console.log(response);
+                    if(response.data == "1"){
+                        window.location.href = "../public/login.html";
+                    }else{
+                        PLATAFORMA.alertMessage("myalert alert-fail","Hubo un error al  cerrar sesion" + response.data, "fas fa-times bg-fail");
+                    }
+                     
+            })
+        },
     }
 
 });

@@ -15,14 +15,18 @@
   }
   
   .side-bar a:hover{
-      background: #e5e5e5;
+      background: #d8d8d8;
+      border-top-left-radius:20px;
+      border-bottom-left-radius: 20px;
       text-decoration: none;
       color: #FF5A00;
   }
   
   .side-bar a.active {
-  
-    border-left: 5px solid #FF7D36;
+      border-top-left-radius:20px;
+      border-bottom-left-radius: 20px;
+      background: #ececec;
+    //   border-left: 5px solid #FF7D36;
       font-weight: bold;
   }
   

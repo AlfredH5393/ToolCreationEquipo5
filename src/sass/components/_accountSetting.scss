@@ -1,0 +1,117 @@
+/*================================[ Page Setting account ]================================*/
+.content-profile{
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    h2{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+.tabs ul{
+	display: flex;
+	border-radius: 5px;
+    margin-bottom: 25px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.tabs ul li{
+	width: 250px;
+    padding: 15px;
+	background: #fbfbfb;
+	text-align: center;
+	color: #3b3b3b;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 3px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+    position: relative;
+    list-style: none;
+}
+
+.tabs ul li .icon{
+	font-size: 20px;
+	margin-right: 5px;
+	vertical-align: center;
+}
+
+.tabs ul li:last-child{
+	border-right: 0px;
+}
+
+.tabs ul li:before{
+	content: "";
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #ff823a;
+	opacity: 0;
+	transition: all 0.2s ease;
+}
+
+.tabs ul li:hover,
+.tabs ul li.active{
+	background: #fdeadd;
+	color: #ff823a;
+}
+
+.tabs ul li:hover:before,
+.tabs ul li.active:before{
+	opacity: 1;
+}
+
+.content-info-perfil{
+	background: #fff;
+    box-shadow: 0 0.125rem 0.8rem rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+    padding: 35px;
+    width: 70%;
+    margin: 20px auto;
+}
+
+.tab_wrap .title{
+	font-size: 17px;
+	margin-bottom: 15px;
+	font-weight: 600;
+}
+.tab_wrap .tab_content{
+	.my-form-row{
+		input[type="text"],
+		input[type="email"],
+		input[type="number"],
+		input[type="password"], select {
+		border: none;
+		background: #ebebeb;
+		padding: 13px 10px;
+		margin: 8px 12px 8px 0px;
+		border-radius: 3px;
+		font-size: 14px;
+		font-family: 'Poppins';
+		transition: all .1s ease;
+    	}
+	}
+    .avatar-img-profile{
+        margin: 20px auto;
+		// width: 25%;
+		height: 13rem;
+		border-radius: 50%;
+    }
+}
+.tab_wrap .tab_content p{
+	font-size: 14px;
+	line-height: 22px;
+	margin-bottom: 10px;
+}
+
+.cover{
+	object-fit: cover;
+	width: 13rem;
+	object-position: center ;
+}
+

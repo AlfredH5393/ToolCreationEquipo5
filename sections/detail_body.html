@@ -1,0 +1,73 @@
+<div class="content-detail" v-for="curso in curdoDetailList">
+<section class="sec-info-curso">
+    <h2>{{curso.nombre}}</h2>
+    <div class="content-Info-item">
+        <div class="content-info-detail">
+            <i class="far fa-comment"></i><span class="iten-name-info"> Epañol</span> 
+        </div>
+        <div class="content-info-detail">
+            <i class="fas fa-user-alt"></i>
+            <span class="iten-name-info">Impartido por {{curso.instructor}} </span> 
+        </div>
+        <div class="content-info-detail">
+            <i class="fas fa-signal"></i>
+            <span class="iten-name-info">{{curso.nivel}}</span> 
+        </div>
+        <div class="content-info-detail">
+            <i class="fas fa-calendar-day"></i>
+            <span class="iten-name-info">Publicado {{getDateHuman(curso.dateModificacion.date)}} </span> 
+        </div>
+    </div>
+
+    <div class="info-presentacion">
+        <div class="cost-curso">
+            <div class="content-boton">
+                    <button type="button" class="btn-incribirte" @click="loadData">Incriberte ahora</button>
+                    <p> {{curso.precio}} {{curso.moneda}}</p>
+                    <div class="enlaces-share">
+                        <a href="#"><i class="far fa-heart"></i> Agregar</a>
+                        <a href="#"><i class="fas fa-share-alt"></i> Compartir</a>
+                   </div>
+            </div>
+                <img v-bind:src="'src/img/bannerscursos/'+curso.imgCurso" alt="" width="200" >
+                <h4 class="subtitle-contenido">Descripcion</h4>
+                <p class="text-detail-curso">
+                    {{curso.descripcion}}
+                </p>
+            </div>
+        
+    </div>
+
+</section>
+<section class="sect-content-curso">
+  
+    <div class="text-learnig-requisites">
+        <div class="learning">
+            <h4 class="subtitle-contenido">¿Que aprenderé?</h4>
+            <p class="text-detail-curso">
+                {{curso.conocimiento}}
+            </p>
+        </div>
+        <div class="requisites">
+            <h4 class="subtitle-contenido">Requisitos</h4>
+            <p class="text-detail-curso">
+                {{curso.requisitos}}
+            </p>
+        </div>
+    </div>
+
+ 
+</section>
+</div>
+
+<div class="plan-studio">
+    <h4 class="subtitle-contenido">Plan de estudio</h4>
+    <button class="accordion">Temas</button>
+    <div class="panel">
+    <ul>
+        <li  v-for="tema in temasList">{{tema.nombre}}</li>
+    </ul>
+    </div>
+</div>
+
+

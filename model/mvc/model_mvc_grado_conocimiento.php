@@ -1,5 +1,4 @@
 <?php
-require ('conexion.php');
 class  MVCGradoConocimiento  {
     protected $db;
     protected $conn;

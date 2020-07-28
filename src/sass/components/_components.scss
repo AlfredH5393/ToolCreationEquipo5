@@ -11,7 +11,7 @@
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 4px;
+    border-radius: 6px;
     box-shadow: 0 0.125rem 0.8rem rgba(0, 0, 0, 0.1);
   }
   
@@ -58,6 +58,12 @@
     background: rgb(59, 165, 223);
 
 }
+
+.btn-success:disabled {
+  cursor: not-allowed;
+  background: rgb(59, 165, 223);
+}
+
 .btn-delete{
  background: #DD4050;
 
@@ -100,6 +106,19 @@ background: #918EF4;
   color: #212529;
   background-color: #e2e6ea;
   border-color: #dae0e5;
+}
+
+.btn-back-student{
+  color: #fff;
+  background-color: #aaaaaa;
+  border: 3px solid #ccc8c8;
+  margin: 5px;
+}
+
+.btn-back-student:hover{
+  color: #fff;
+  background-color: #8b8b8b;
+  text-decoration: none;
 }
 
 /*//////////////////////////////////////////////////////////////////
@@ -175,4 +194,11 @@ background: #918EF4;
   border-left:3px solid #333; 
   padding: 8px 12px;
   background: #f0f0f0;
+}
+.grid-item{
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 6px;
+    box-shadow: 0 0.125rem 0.8rem rgba(0, 0, 0, 0.1);
 }

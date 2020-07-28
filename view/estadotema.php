@@ -1,3 +1,7 @@
+<?php
+session_start();
+  if (isset($_SESSION['ingreso']) && $_SESSION['ingreso']=='YES' &&  $_SESSION['idRol'] == "1") 
+{?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +22,7 @@
 <div class="contenedor active" id="contenedor">
 
         <!-- Los archivos php de header y sidebar -->
-        <?php require './includes/header.php'?>
+        <?php $page = 'estadoTema'; require './includes/header.php'?>
 
          <?php require './includes/sidebar.php'?>
 
@@ -225,3 +229,10 @@
  
 </body>
 </html>
+<?php
+  }
+  else
+  {
+    header("location: ../public/login.html");
+  }
+ ?>

@@ -1,0 +1,178 @@
+/*=============================[Detail Curso]===========================*/
+.content-detail{ 
+ width: 100%;
+ height: auto;
+.sec-info-curso{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #1D3557;
+    height: 350px;
+    position: relative;
+    margin-bottom: 20rem;
+
+    h2{
+        color: white;
+        font-size: 30px;
+    }
+
+    .content-Info-item{
+        display: flex;
+        padding: 10px 20px;
+        flex-direction: row;
+        .content-info-detail{
+            padding: 8px 10px;
+            color: white;
+        }
+    }
+
+    .info-presentacion{
+        background: #fff;
+        position: absolute;
+        bottom: 0;
+        top: 70%;
+        width: 90%;
+        // height: 500px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        .cost-curso{
+            // margin: 10px;
+            box-shadow: 0 0.125rem 0.8rem rgba(0, 0, 0, 0.2);
+            padding: 25px;
+             display: flex;
+             flex-direction: column;
+             border-radius: 4px;
+            .content-boton{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .btn-incribirte{
+                    border:none;
+                    padding: 10px 14px;
+                    background: #ff8453;
+                    color: white;
+                    border-radius: 6px;
+                    transition: .2s;
+                }
+                .btn-incribirte:hover{
+                    cursor: pointer;
+                    background: #ff9469;
+
+                }
+                p{
+                    color: #ff804e;
+                    font-size: 25px;
+                    font-weight: 700;
+                }
+                .enlaces-share{
+                    a{
+                        color: black;
+                        padding: 5px;
+                    }
+                }
+            }
+            img{
+                display: block;
+                margin: 0 auto
+            }
+            
+        }
+        
+    }
+}
+
+.subtitle-contenido{
+    padding: 5px 0px 5px 0px;
+    font-size: 18px;
+    color: #ff804e;
+}
+.text-detail-curso{
+    letter-spacing: .5px;
+    line-height: 20px;
+    margin-top: 10px;
+   }
+
+.subtitle-contenido::after{
+    display: block;
+    content: '';
+    margin-top: 8px;
+    width: 3%;
+    height: 3px;
+    background: #ff804e;
+    border-radius: 1px;
+}
+.sect-content-curso{
+    margin: 0px auto;
+    padding: 20px;
+    width: 90%;
+    .text-learnig-requisites{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        // align-items: center;
+        padding-bottom: 20px;
+        .learning{
+           
+            width: 45%;
+        }
+        .requisites{
+            width: 45%;
+        }
+    }
+}
+
+}
+
+.plan-studio{
+    width: 90%;
+    margin: 20px auto;
+}
+button.accordion {
+    margin-top: 10px;
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ccc;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #444;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: #ccc;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    ul{
+        margin: 10px;
+        li{
+            list-style: none;
+            background: #eee;
+            padding: 12px 20px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+    }
+}

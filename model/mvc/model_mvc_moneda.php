@@ -1,5 +1,4 @@
 <?php
-require ('conexion.php');
 class MVCMoneda {
     protected $db;
     protected $conn;
@@ -36,7 +35,7 @@ class MVCMoneda {
         $this->sql="INSERT INTO TblMoneda (VchNombre_Moneda,Fl_Valor_Moneda) VALUES(?,?)"; 
         $this->params =  array( $this->nombreMoneda ,  $this->valorMoneda );
         $insert = sqlsrv_query( $this->conn, $this->sql, $this->params);
-       $this->closeConnection();
+        $this->closeConnection();
         return $insert;
     }
 

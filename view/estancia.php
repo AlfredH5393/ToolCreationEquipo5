@@ -1,3 +1,7 @@
+<?php
+session_start();
+  if (isset($_SESSION['ingreso']) && $_SESSION['ingreso']=='YES' &&  $_SESSION['idRol'] == "1") 
+{?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +24,7 @@
         <!-- Los archivos php de header y sidebar -->
         <?php require './includes/header.php'?>
 
-         <?php require './includes/sidebar.php'?>
+         <?php $page = 'estancia'; require './includes/sidebar.php'?>
 
         <!-- cONTENEDOR DE LOS ELEMENTOS QUE INTERCATUAN CON LA TABLA O EL CRUD -->
         <main class="main">
@@ -193,8 +197,21 @@
               </div>
             </div>
           </div>
+
+          <!-- <li v-if="paginas == 1" class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li> -->
+                <!-- Paso 33. incluir v-bind en propiedad class con nombre de variable ocultarMostrarSiguiente -->
+                <!-- <li v-else v-bind:class="ocultarMostrarSiguiente"> -->
+                    <!-- Paso 31. Programar el botón de siguiente - crear función -->
+                    <!-- <a v-on:click="siguiente" class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
  
-      
+       -->
 </div>
      <!--============================================= SRC JS ==================================================-->
      
@@ -225,3 +242,10 @@
  
 </body>
 </html>
+<?php
+  }
+  else
+  {
+    header("location: ../public/login.html");
+  }
+ ?>

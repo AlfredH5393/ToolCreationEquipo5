@@ -2,27 +2,12 @@
 [ Main ]*/
 .main {
     grid-area: contenido;
-    background: #f9f9f9;
+    background: #ececec;
     padding: 40px;
   }
   
   .main .title{
       margin-bottom: 20px;
-  }
-  
-  .main .grid-videos{
-      display: grid;
-      grid-gap: 40px 20px;
-      grid-template-columns: repeat(4, 1fr);
-  }
-  
-  .main .grid-videos .video{
-      width: 100%;
-      display: block;
-  }
-  
-  .main .grid-videos .video img {
-      width: 100%;
   }
   
 
@@ -37,6 +22,28 @@
     .header .barra-busqueda input {
         min-width: 70%;
     }
+}
+
+.main .content-grid {
+    display: grid;
+    padding: 3px;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr ;
+    grid-gap: 13px;
+}
+
+.grid-item1{
+    grid-column: 1 / 2;
+    grid-row: 1 / span 3;
+}
+.grid-item2{
+    grid-column: 2 / span 4;
+    // grid-row:  1 / span 2;
+}
+.grid-item3 {
+    grid-column:   2 / span 4;
+}
+.grid-item4 {
+    grid-column: 2 / span 4;
 }
 
 
@@ -74,3 +81,80 @@
 		grid-template-columns: 1fr;
 	}
 }
+
+.my-perfil-dash{
+    padding: 14px;
+    text-align: center;
+    h4{
+        font-size: 18px;
+        letter-spacing: 2.5px;
+        text-align: center;
+        padding: 5px 0px;
+    }
+    img{
+        display: block;
+        margin: 0 auto;
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        object-position: center;
+         border-radius: 100%;
+        border-radius: 100%;
+    }
+    .rol{
+        padding: 5px 0px;
+        font-size: 15px;
+        color: #b1b1b1; 
+        letter-spacing: 1px;
+    }
+    .status{
+        color: #66d38c;
+    }
+}
+
+.wolcome-dash{
+    // background-image: linear-gradient(to left top, #ff955b, #ff8748, #ff7935, #fe6a20, #fd5900);
+    background-image: linear-gradient(to left top, #f73464, #fd3852, #ff403f, #ff4c28, #fd5900);
+    padding: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+     border-radius: 6px;
+    .text-welcome {
+        max-width: 48%;
+        color: white;
+    }
+    .img-welcome {
+        max-width: 48%;
+        img{
+        width: 290px;
+            
+        }
+    }
+}
+
+.form1-dash, .form2-dash{
+    padding: 14px;
+    background-image: linear-gradient(to left top, #0b00ff, #004aff, #006dff, #0089ff, #3ca2ff);
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+    span img{
+        // display: block;
+        padding: 2px;
+        width: 10%;
+    }
+    a{
+        color: white;
+        transition: all .3s ease;
+    }
+    a:hover{
+        text-decoration: none;
+        background: #fff;
+        padding: 3px 6px;
+        border-radius: 20px;
+    }
+}
+// .form1-dash{
+   
+// }

@@ -205,6 +205,20 @@ const TIPO_RECURSO = new Vue({
         next: function(){
             this.paginaActual = this.paginaActual + 1;
             this.paginar(this.paginaActual);
+        },closeSesion: () =>{
+            let formdata = new FormData();
+            formdata.append('option','destroySesion');
+            axios.post("../controller/controller_login.php", formdata)
+                    .then(function (response) {
+                        console.log(response);
+                    if(response.data == "1"){
+                        window.location.href = "../public/login.html";
+                    }else{
+                        TIPO_RECURSO.alertMessage("myalert alert-fail","Hubo un error al  cerrar sesion" + response.data, "fas fa-times bg-fail");
+                    }
+                     
+            })
+ 
         },
     }
 });

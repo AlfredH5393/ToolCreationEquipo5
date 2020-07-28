@@ -20,7 +20,7 @@ class DAOCategoria{
        $this->db->closeConnection( $this->conn );
     }
 
-    
+                                //OBJETO VOCategoria
     public function insertData($categoria){
         $this->sql="INSERT INTO TblCategoriaInstructor(Vch_CategoriaInst) VALUES(?)"; 
         $this->params =  array( $categoria->getNombreCategoria() );

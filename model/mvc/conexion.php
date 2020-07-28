@@ -26,3 +26,15 @@ class Conexion{
         return $this->connection;
     }
 }
+
+
+// $server = 'localhost';
+// $connectInfo = array("Database"=>"dbToolCreation","UID"=>"usuario1", "PWD"=>"admin1","CharacterSet"=>"UTF-8");
+// $conn_sis = sqlsrv_connect($server, $connectInfo);
+
+// if($conn_sis){
+//     echo "<h1>Conexion  a SQLServer exitosa :)</h1>";
+// }else {
+//     echo "fallo en la conexion";
+//     die(print_r(sqlsrv_errors(), true));
+// }

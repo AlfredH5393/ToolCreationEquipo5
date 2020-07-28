@@ -1,3 +1,7 @@
+<?php
+session_start();
+  if (isset($_SESSION['ingreso']) && $_SESSION['ingreso']=='YES' &&  $_SESSION['idRol'] == "1") 
+{?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +24,7 @@
         <!-- Los archivos php de header y sidebar -->
         <?php require './includes/header.php'?>
 
-         <?php require './includes/sidebar.php'?>
+         <?php $page = 'categorias'; require './includes/sidebar.php'?>
 
         <!-- cONTENEDOR DE LOS ELEMENTOS QUE INTERCATUAN CON LA TABLA O EL CRUD -->
         <main class="main">
@@ -47,7 +51,7 @@
                       <button class="btn btn-add " type="submit" data-toggle="modal" data-target="#insertModal" ><i class="fas fa-plus"></i> Agregar</button>
      
                     </div>
-
+ 
 
                     <div class="card-body ">     
                       <div class="js-pscroll">
@@ -223,3 +227,10 @@
  
 </body>
 </html>
+<?php
+  }
+  else
+  {
+    header("location: ../public/login.html");
+  }
+ ?>

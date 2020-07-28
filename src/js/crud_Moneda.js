@@ -1,4 +1,5 @@
 var URL ="../controller/controller_moneda.php";
+var URL_MONEDA_FACADE_PATTERN = " ../controller/controller_facade.php";
 var d = document;
 const MONEDA = new Vue({
     el: "#contenedor",
@@ -37,10 +38,12 @@ const MONEDA = new Vue({
             //FORMDATA ES UNA FUNCION QUE TE PERMITE ENVIAR PARAMETROS A PHP
             let formdata = new FormData();
             //APPEND ES DONDE AGREGAR EL NOMBRE Y VALOR
-            formdata.append("option", "count")
+            // formdata.append("option", "count")
+            formdata.append('functionFacade','contRegister')
+            formdata.append('mudule','moneda')
            
             //AXIOS TE PERMITE HACER UNA PETICION AL SERVIDOR O BD DE FORMA ASYCRONA
-            axios.post(URL, formdata)
+            axios.post(URL_MONEDA_FACADE_PATTERN, formdata)
                 .then(function (response) {
                     // RESPUENTA A LA PETICION
                     console.log(response);
@@ -52,8 +55,10 @@ const MONEDA = new Vue({
         },
         cargarDatos: function () {
             let formdata = new FormData();
-            formdata.append("option", "showdata")
-            axios.post("../controller/controller_moneda.php", formdata)
+            // formdata.append("option", "showdata")
+            formdata.append('functionFacade','getData')
+            formdata.append('mudule','moneda')
+            axios.post(URL_MONEDA_FACADE_PATTERN, formdata)
                 .then(function (response) {
                     console.log(response);
                     //monedas es el arreglo de  JS 
@@ -222,7 +227,22 @@ const MONEDA = new Vue({
         next: function(){
             this.paginaActual = this.paginaActual + 1;
             this.paginar(this.paginaActual);
-        }
+        },
+        closeSesion: () =>{
+           let formdata = new FormData();
+           formdata.append('option','destroySesion');
+           axios.post("../controller/controller_login.php", formdata)
+                   .then(function (response) {
+                       console.log(response);
+                   if(response.data == "1"){
+                       window.location.href = "../public/login.html";
+                   }else{
+                    MONEDA.alertMessage("myalert alert-fail","Hubo un error al  cerrar sesion" + response.data, "fas fa-times bg-fail");
+                   }
+                    
+           })
+
+       },
 
     }
 });

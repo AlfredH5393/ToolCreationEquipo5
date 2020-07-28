@@ -1,5 +1,4 @@
 <?php
-require('conexion.php');
 class MVCNivel{
     protected $conn;
     protected $params;

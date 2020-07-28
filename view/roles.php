@@ -1,3 +1,7 @@
+<?php
+session_start();
+  if (isset($_SESSION['ingreso']) && $_SESSION['ingreso']=='YES' &&  $_SESSION['idRol'] == "1") 
+{?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +22,7 @@
 <div class="contenedor active" id="contenedor">
         <?php require './includes/header.php'?>
 
-         <?php require './includes/sidebar.php'?>
+         <?php $page = 'roles'; require './includes/sidebar.php'?>
 
         <main class="main">
             <h2 class="title">Modulo de {{titleModule}}</h2>
@@ -69,18 +73,18 @@
                     </div>
                     </div>
                     <nav aria-label="..." style="padding: 10px">
-                  <ul class="pagination">
-                    <li v-bind:class="ocultarMostrarAnterior">
-                      <a class="page-link" href="#" tabindex="-1" aria-disabled="true" @click="prev">Anterior</a>
-                    </li>
-                    <li v-for="pagina in paginas" class="page-item">
-                      <a class="page-link" @click ="paginar(pagina)" href="#">{{pagina}}</a>
-                    </li>
-                    <li v-bind:class="ocultarMostrarSiguiente">
-                      <a class="page-link" href="#" @click="next">Siguiente</a>
-                    </li>
-                  </ul>
-                </nav>
+                     <ul class="pagination">
+                        <li v-bind:class="ocultarMostrarAnterior">
+                          <a class="page-link" href="#" tabindex="-1" aria-disabled="true" @click="prev">Anterior</a>
+                        </li>
+                        <li v-for="pagina in paginas" class="page-item">
+                          <a class="page-link" @click ="paginar(pagina)" href="#">{{pagina}}</a>
+                        </li>
+                        <li v-bind:class="ocultarMostrarSiguiente">
+                          <a class="page-link" href="#" @click="next">Siguiente</a>
+                        </li>
+                      </ul>
+                   </nav>
                 </div>
             </div>
         </main>
@@ -211,3 +215,10 @@
  
 </body>
 </html>
+<?php
+  }
+  else
+  {
+    header("location: ../public/login.html");
+  }
+ ?>

@@ -13,27 +13,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrate | ToolCreation</title>
      <!--=========================================  Links CSS ======================================================-->
-    
+     <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon">
      <link rel="stylesheet" href="../src/css/normalize.css">
      <link rel="stylesheet" href="../src/css/style.css">
      <link rel="stylesheet" href="../src/icons/all.css">
 </head>
 <body class="bg-svg-register">
-    <div class="content-login">
+    <div class="content-login" id="contenedor">
         <div class=" content-form-login">
            <h1>Recupera tu contraseña</h1> 
+                    <div class="container-alert" v-bind:style="displayAlert">
+                        <div v-bind:class="alertgeneral" role="alert" style=" width: 60%;" >
+                                <p>{{messagealert}}</p>
+                                <i v-bind:class="alerticon"></i>
+                        </div>
+                    </div>
                 <form>
                     <div class="page2">
                         <img src="./src/img/reply.svg" alt="" width="150">
                         <div class="my-form-row-2">
                           
-                            <input type="email" name="" class="input-70" placeholder="Email" id="email">
+                            <input type="email" name="" @keyup="comprobarEmailRecuperacion"  class="input-70" placeholder="Email" id="insert-email">
                         </div>
 
             
                         <div class="my-form-row-2 ">
                         
-                            <button type="button" class="input-33 btn-rgister"> Recuperar</button>
+                            <button type="button" class="input-33 btn-rgister" v-bind:disabled="buttonEnable" @click="recuperarPass"> Recuperar</button>
                         </div>
                     </div>
                
@@ -67,7 +73,10 @@
         
 </div>
 <a href="login.html" class="btn-back"><i class="fas fa-arrow-left"></i></a>
-    <script src="src/js/jquery-3.5.1.min.js"></script>
+        <script src="../src/js/axios.min.js"> </script>
+        <script src="../src/js/vue.js"></script>
+<script src="../src/js/acces_plataform.js" type="module"></script>
+    <!-- <script src="src/js/jquery-3.5.1.min.js"></script> -->
     <!-- <script src="src/js/step.js"></script> -->
 </body>
 </html>

@@ -2,10 +2,11 @@
 $operacion = $_POST['option'];
 //------------------[llamado a los archivos]------------------------
 //singleton
-require('../model/singleton/model_moneda.php');
+// require('../model/singleton/model_moneda.php');
 
 //MVC 
-// require('../model/mvc/model_mvc_moneda.php');
+require('../model/mvc/conexion.php');
+require('../model/mvc/model_mvc_moneda.php');
 
 //DAO Y VO
 // require('../model/DAO/DAO_moneda.php');
@@ -13,10 +14,10 @@ require('../model/singleton/model_moneda.php');
 //------------------[Creacion de las instancias de los patrones]------------------------
 
 //intancia generaL para PATRON[SINGLETON]
-$objmoneda = new SINGLETONMoneda();
+// $objmoneda = new SINGLETONMoneda();
 
 //intancia generaL para PATRON [mvc]
-// $objmoneda = new MVCMoneda();
+$objmoneda = new MVCMoneda();
 
 //instancia para DAO Y VO
 // $dao = new DAOMoneda();

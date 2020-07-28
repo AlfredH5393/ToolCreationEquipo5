@@ -5,6 +5,7 @@ $operacion = $_POST['option'];
 // require('../model/singleton/model_estancia.php');
 
 //MVC 
+// require('../model/mvc/conexion');
 // require('../model/mvc/model_mvc_estancia.php');
 
 //DAO

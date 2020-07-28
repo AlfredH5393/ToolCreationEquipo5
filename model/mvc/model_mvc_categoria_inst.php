@@ -1,5 +1,4 @@
 <?php
-require ('conexion.php');
 class  MVCCategoriaInstructor  {
     protected $db;
     protected $conn;
@@ -44,7 +43,7 @@ class  MVCCategoriaInstructor  {
         $this->params =  array( $this->nombreCategoria );
         $insert = sqlsrv_query( $this->conn, $this->sql, $this->params);
        $this->closeConnection();
-        return $insert;
+        return $insert; 
     }
 
     public function updatetData(){

@@ -11,7 +11,8 @@ class SINGLETONCategoria extends MVCCategoriaInstructor {
     public function __construct(){
         $this->startDB();
     }
-
+    
+    
     public function startDB(){
         $this->db = SingletonConexion::getInstance();
         $this->conn = $this->db->getConnection(); 

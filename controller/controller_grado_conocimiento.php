@@ -5,6 +5,7 @@ $operacion = $_POST['option'];
 // require('../model/singleton/model_grado_conocimiento.php');
 
 //MVC 
+// require('../model/mvc/conexion');
 // require('../model/mvc/model_mvc_grado_conocimiento.php');
 
 //DAO

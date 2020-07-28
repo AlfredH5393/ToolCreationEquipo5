@@ -1,5 +1,4 @@
 <?php
-require ('conexion.php');
 class  MVCEstancia {
     protected $db;
     protected $conn;
